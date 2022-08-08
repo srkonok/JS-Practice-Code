@@ -29,3 +29,19 @@ const addMd=function(flight,passenger){
 }
 console.log(flight);//will not change bcz it primitive value
 console.log(Konok);// change because it is reference
+
+// function returning function
+/* const greet =function(greeting){
+    return function(name){
+        console.log(`${greeting} ${name}`)
+    }
+}
+const greaterHey=greet('Hey');
+greaterHey('Konok');
+greet('Hello')('Binoee');
+*/
+//frf with arrow
+const greet =(greeting)=>(name)=>console.log(`${greeting} ${name}`)
+const greaterHey=greet('Hey');
+greaterHey('Konok');
+greet('Hello')('Binoee');
